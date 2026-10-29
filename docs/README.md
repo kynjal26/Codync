@@ -5,6 +5,10 @@ Source review, a passing build, local integration tests and production acceptanc
 
 ## Start here
 
+Enterprise continuation work: [handoff and decision index](plans/codync-continuation-handoff.md).
+These documents distinguish confirmed direction from proposed architecture; they do not describe
+features already implemented in this checkout.
+
 | Task | Read |
 |---|---|
 | Find a module or decide where a file belongs | [File structure](architecture/file-structure.md) |

@@ -1,0 +1,561 @@
+{
+  "reviewed_on": "2026-10-29",
+  "method": "read-only source and regression-test inspection; target code not executed",
+  "revisions": {
+    "zyndi": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+    "codync_destination": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+    "preserved_local_codync": "e770dbd9ebaf486fe2e44aefa35ddcf0e278f174"
+  },
+  "references": [
+    {
+      "id": "C01",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "host/src/api/devices.rs",
+      "line": 12,
+      "anchor": "pub enum Caller",
+      "sha256": "365baee9041c320c43211d77f04469c080838ef1f006d7c539efc7db05bbe3f3",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/host/src/api/devices.rs#L12"
+    },
+    {
+      "id": "C02",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "host/src/remote/channel.rs",
+      "line": 382,
+      "anchor": "async fn recheck",
+      "sha256": "4fc7b88e2e788702f544cdf35748660d2a94855d1075ed15f65cefc84e3fc41b",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/host/src/remote/channel.rs#L382"
+    },
+    {
+      "id": "C03",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "host/src/api/events.rs",
+      "line": 55,
+      "anchor": "pub fn events_stream",
+      "sha256": "cf8d3acf0879251346c47ce1f8e6220ff3a927320025ad35a4aa03b0464a942e",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/host/src/api/events.rs#L55"
+    },
+    {
+      "id": "C04",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "host/src/agent/backends.rs",
+      "line": 80,
+      "anchor": "pub fn list",
+      "sha256": "24c5c28abb820c7feeb8d1cb8d8a4cf1f341cc989d381d2b67ff24842a8024d8",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/host/src/agent/backends.rs#L80"
+    },
+    {
+      "id": "C05",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "host/src/agent/bot/mod.rs",
+      "line": 1,
+      "anchor": "One actor per bot",
+      "sha256": "eddeefa2b2ebba4c2290314fc31f931786cead7e392a8f10405d6059655ed9ea",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/host/src/agent/bot/mod.rs#L1"
+    },
+    {
+      "id": "C06",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "host/src/agent/fallback/mod.rs",
+      "line": 106,
+      "anchor": "pub fn check",
+      "sha256": "fe690f7c6d1a03a00ab10435271785752d6fc6bbe32504054ac303256c38c51b",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/host/src/agent/fallback/mod.rs#L106"
+    },
+    {
+      "id": "C07",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "host/src/agent/fallback/rest.rs",
+      "line": 45,
+      "anchor": "pub fn account_of",
+      "sha256": "c704cc07f1515a0955c1b1da7a339351586d1ba34ea9e8afe74d0a723595a8ea",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/host/src/agent/fallback/rest.rs#L45"
+    },
+    {
+      "id": "C08",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "host/src/market/vault.rs",
+      "line": 19,
+      "anchor": "pub async fn unlock",
+      "sha256": "c19cb647da173e7cadd42e4a92de4ecda62f5b1e5965df0502a8fc13686a634b",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/host/src/market/vault.rs#L19"
+    },
+    {
+      "id": "C09",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "apps/desktop/src/renderer/client/host-client.ts",
+      "line": 143,
+      "anchor": "export class HostClient",
+      "sha256": "80ea038d2236a71fa8ac690bd2e614fe35271880a0430876bcbe33fcb06dd768",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/apps/desktop/src/renderer/client/host-client.ts#L143"
+    },
+    {
+      "id": "C10",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "apps/desktop/src/renderer/store/bot-store.ts",
+      "line": 51,
+      "anchor": "export class BotStore",
+      "sha256": "d0af424a313d7972f9ec931345583799660cc4238d35144eb24e1b85938a1f02",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/apps/desktop/src/renderer/store/bot-store.ts#L51"
+    },
+    {
+      "id": "C11",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "apps/desktop/src/renderer/views/thread/ChatSidePanel.tsx",
+      "line": 11,
+      "anchor": "export function ChatSidePanel",
+      "sha256": "9fd429d40f6fcdb854b54b917f9706d80e27497528b7c2e9f383b44972bec5c2",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/apps/desktop/src/renderer/views/thread/ChatSidePanel.tsx#L11"
+    },
+    {
+      "id": "C12",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "apps/desktop/src/renderer/styles/theme.css",
+      "line": 3,
+      "anchor": ":root",
+      "sha256": "f7814bd278e72d9fc13fb25b1bb4447307f3b97649adff892e0e795d7df6a71f",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/apps/desktop/src/renderer/styles/theme.css#L3"
+    },
+    {
+      "id": "C13",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "host/src/chat/artifacts.rs",
+      "line": 30,
+      "anchor": "pub struct Artifact",
+      "sha256": "08f4954be4b9faf4d83ec8e852ffc2db29d1777670a6b104b252815a6bdf7b5a",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/host/src/chat/artifacts.rs#L30"
+    },
+    {
+      "id": "C14",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "apps/desktop/src/renderer/views/library/ArtifactView.tsx",
+      "line": 18,
+      "anchor": "export function ArtifactView",
+      "sha256": "43aa08f40766c9f63c62ab3b896f2fd33f2280c864516c0801a95e760bf5d560",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/apps/desktop/src/renderer/views/library/ArtifactView.tsx#L18"
+    },
+    {
+      "id": "C15",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "apps/desktop/src/main/artifacts.ts",
+      "line": 19,
+      "anchor": "export function registerArtifacts",
+      "sha256": "6c2a61df2633933a9e8ca02c3483c33d12e7a075fed4f0c56a15b6d802613dd5",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/apps/desktop/src/main/artifacts.ts#L19"
+    },
+    {
+      "id": "C16",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "docs/features/computer-use.md",
+      "line": 1,
+      "anchor": "# Computer use",
+      "sha256": "707467259162517cd94aed032c77099fb641565c6eddfb1573f6a08cf045160b",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/docs/features/computer-use.md#L1"
+    },
+    {
+      "id": "C17",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "docs/features/voice-call.md",
+      "line": 1,
+      "anchor": "# Voice call",
+      "sha256": "f72ea509e88c878e1017d32ba08bb2c3e5700c4b9c9211b8e90ed4a407021f95",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/docs/features/voice-call.md#L1"
+    },
+    {
+      "id": "C18",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "host/src/chat/calls/tools.rs",
+      "line": 111,
+      "anchor": "fn answer(",
+      "sha256": "7f81e9d68d147f76ef4b26996c5bee9c75d02ce056bd3cb57b1cdfb82c7501c8",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/host/src/chat/calls/tools.rs#L111"
+    },
+    {
+      "id": "C19",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "docs/features/context-and-memory.md",
+      "line": 42,
+      "anchor": "## Memory",
+      "sha256": "18ba1df7eeb6dcc994d430ecb6cdf955989d6db154a2c56e3af937c1aacde087",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/docs/features/context-and-memory.md#L42"
+    },
+    {
+      "id": "C20",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "host/src/chat/memory/mod.rs",
+      "line": 27,
+      "anchor": "pub fn shared(",
+      "sha256": "9412d15dac1ab1475e4668e07fc96b07dc52bf253907a2fa551051a1326b1a0b",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/host/src/chat/memory/mod.rs#L27"
+    },
+    {
+      "id": "C21",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "host/src/agent/bot/updates.rs",
+      "line": 154,
+      "anchor": "async fn on_permission",
+      "sha256": "8de7f5cc3767240885b8cc98383fb79af96df100104e234959ecaf285bdef527",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/host/src/agent/bot/updates.rs#L154"
+    },
+    {
+      "id": "C22",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "apps/desktop/src/renderer/views/library/ArtifactParts.tsx",
+      "line": 29,
+      "anchor": "sandbox={preview",
+      "sha256": "638a10b450944ebcbf94a7e8e03167c0cb41134aad4ef92239c97a6d95bc3e45",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/apps/desktop/src/renderer/views/library/ArtifactParts.tsx#L29"
+    },
+    {
+      "id": "C23",
+      "repository": "kynjal26/Codync",
+      "commit": "2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0",
+      "path": "host/src/screen/cua.rs",
+      "line": 35,
+      "anchor": "pub(super) async fn tools",
+      "sha256": "d648397e8a6197d34c5f041f7efbdb316715924527339a94ceee1fad47eab70f",
+      "url": "https://github.com/kynjal26/Codync/blob/2099c8a4c3ffa5d9ca31c0f18d05a63b2a03fef0/host/src/screen/cua.rs#L35"
+    },
+    {
+      "id": "Z01",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-host/src/access.rs",
+      "line": 313,
+      "anchor": "pub async fn caller(",
+      "sha256": "b9497e06d48ae2a44fcbd1d473b7aebd9d0cafc349ab0847b3b309f627010f05",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-host/src/access.rs#L313"
+    },
+    {
+      "id": "Z02",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-store/src/privacy.rs",
+      "line": 46,
+      "anchor": "pub fn sees(",
+      "sha256": "b8ba1627e05d1d327274c5f3487acacf10a5a7bbaf9d6eec384b5ced6a1176e4",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-store/src/privacy.rs#L46"
+    },
+    {
+      "id": "Z03",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-host/src/sessions.rs",
+      "line": 109,
+      "anchor": "pub fn lane_for(",
+      "sha256": "2256d77ca11a9cd4b1c989a7115e843baff726e192c1affe0c4d7812f4516cc8",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-host/src/sessions.rs#L109"
+    },
+    {
+      "id": "Z04",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-host/src/tools/sandbox.rs",
+      "line": 38,
+      "anchor": "pub enum Confinement",
+      "sha256": "b516b3532fd7647bb082ee11ad2f0a65196e019a697326e1c0bfb2f4004fe31f",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-host/src/tools/sandbox.rs#L38"
+    },
+    {
+      "id": "Z05",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-host/src/run_as.rs",
+      "line": 24,
+      "anchor": "pub const PEOPLE_GROUP",
+      "sha256": "31cd1878588a8a3d764687d69a190585bd35159fa27e26f6d37685579d41714e",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-host/src/run_as.rs#L24"
+    },
+    {
+      "id": "Z06",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-host/src/governance.rs",
+      "line": 247,
+      "anchor": "pub async fn choice_refusal",
+      "sha256": "ea51797ee47411727afd6f3ad2d28cd1ed36893b3444a32200d37d1587c8c3d1",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-host/src/governance.rs#L247"
+    },
+    {
+      "id": "Z07",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-store/src/providers.rs",
+      "line": 9,
+      "anchor": "pub struct RuntimeProvider",
+      "sha256": "f4a44b1d73a699859a441eb40d93125f2dd4c7a113db8d9acb972b689c8dde7a",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-store/src/providers.rs#L9"
+    },
+    {
+      "id": "Z08",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-host/src/provider_catalog_rpc.rs",
+      "line": 7,
+      "anchor": "pub const METHODS",
+      "sha256": "be624c54690a4fd2e166dd9e335115e12f0d11e98771b69cdcb7200349652bd5",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-host/src/provider_catalog_rpc.rs#L7"
+    },
+    {
+      "id": "Z09",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "apps/desktop/src/renderer/components/ProviderAccounts.tsx",
+      "line": 73,
+      "anchor": "export function ProviderAccounts",
+      "sha256": "049257f288278bd45489e2ccb733368be49b996c3fe3140f38dd15a2b9f4008a",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/apps/desktop/src/renderer/components/ProviderAccounts.tsx#L73"
+    },
+    {
+      "id": "Z10",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-host/src/sign_in_rpc.rs",
+      "line": 20,
+      "anchor": "pub",
+      "sha256": "ed5dfc0005d0d45c22ed63288ebfdbff91fcd9c49459ff6e4125552d97feb7d6",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-host/src/sign_in_rpc.rs#L20"
+    },
+    {
+      "id": "Z11",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "docs/desktop-codync-reference.md",
+      "line": 1,
+      "anchor": "# Desktop Settings",
+      "sha256": "2a0dc020a13c123d70407e2679df6572e0f4272ab429d53c044e5063a9b3700e",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/docs/desktop-codync-reference.md#L1"
+    },
+    {
+      "id": "Z12",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-providers/src/lib.rs",
+      "line": 399,
+      "anchor": "pub fn create(",
+      "sha256": "8b210dab4a628bd6868bae08191aabca9f92cc93cce5b7cf269e412d2bb88616",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-providers/src/lib.rs#L399"
+    },
+    {
+      "id": "Z13",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-host/src/fallback.rs",
+      "line": 1,
+      "anchor": "Codync",
+      "sha256": "e3f90ba2196a70d459b451a58eb7ce62ee248316f7134e112e0253a28fa5c7c9",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-host/src/fallback.rs#L1"
+    },
+    {
+      "id": "Z14",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "apps/desktop/src/renderer/styles.css",
+      "line": 1,
+      "anchor": ":root",
+      "sha256": "4cc7890527f23d81b311dd6017aa29813ea265147bf1c0856ce941a5fe737735",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/apps/desktop/src/renderer/styles.css#L1"
+    },
+    {
+      "id": "Z15",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "apps/desktop/src/renderer/components/DetailsView.tsx",
+      "line": 9,
+      "anchor": "ported from Codync",
+      "sha256": "c84aa843acff86572005aa80d44e1fa2bd5b659a943770de003f1a007d62f9f5",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/apps/desktop/src/renderer/components/DetailsView.tsx#L9"
+    },
+    {
+      "id": "Z16",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-host/src/pages/mod.rs",
+      "line": 26,
+      "anchor": "pub enum PageWrite",
+      "sha256": "d81139e3e574c92362487a85a0e7151956032d47b75a04c23f4f8318ab43fbbb",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-host/src/pages/mod.rs#L26"
+    },
+    {
+      "id": "Z17",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "apps/desktop/src/renderer/components/DocumentEditor.tsx",
+      "line": 112,
+      "anchor": "export function DocumentEditor",
+      "sha256": "fb0e8814cc6f6c440aa25437119bda80133d27cc17d9f546490ccd7508ef65ae",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/apps/desktop/src/renderer/components/DocumentEditor.tsx#L112"
+    },
+    {
+      "id": "Z18",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "apps/desktop/src/renderer/components/Pages.tsx",
+      "line": 796,
+      "anchor": "export function PageStage",
+      "sha256": "b8d03329b2859cc1ad5257bd40026aad5afde0ff61222bc33ffa1c4635c5a6fd",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/apps/desktop/src/renderer/components/Pages.tsx#L796"
+    },
+    {
+      "id": "Z19",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "apps/desktop/src/main/page-frame.ts",
+      "line": 31,
+      "anchor": "export const PAGE_CSP",
+      "sha256": "26beac032eea4527bf75892ab7c7eab15307032f50f8f0f9cc49fccb8c35225b",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/apps/desktop/src/main/page-frame.ts#L31"
+    },
+    {
+      "id": "Z20",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "docs/rust-integration/adr/0006-computer-use-on-the-mac.md",
+      "line": 79,
+      "anchor": "## Addendum: each person",
+      "sha256": "e759ba0f74a3725466ec710cc7913e67c0d1617edb8acb1f616084b0cd7c0f18",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/docs/rust-integration/adr/0006-computer-use-on-the-mac.md#L79"
+    },
+    {
+      "id": "Z21",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-host/src/mac_bridge.rs",
+      "line": 144,
+      "anchor": "pub fn revoke_bot_access",
+      "sha256": "0b6176221ca505853f16965d697a8d167340d746af43e3bd31f501eff70f9171",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-host/src/mac_bridge.rs#L144"
+    },
+    {
+      "id": "Z22",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "apps/desktop/src/executor/executor.ts",
+      "line": 24,
+      "anchor": "export interface ExecutorOptions",
+      "sha256": "f9a3b6735a7235c8130da077baa1482cdb0c264876b5d85d430069c8995e1e06",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/apps/desktop/src/executor/executor.ts#L24"
+    },
+    {
+      "id": "Z23",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-host/src/voice_context.rs",
+      "line": 220,
+      "anchor": "You are {name}",
+      "sha256": "06029c5d9615a22b7826a9ce2d0b4f0d9ba9d17d5d247f1805b9fff2a01796b9",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-host/src/voice_context.rs#L220"
+    },
+    {
+      "id": "Z24",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-host/src/calls.rs",
+      "line": 833,
+      "anchor": "pub async fn authorize_media",
+      "sha256": "8f9dde57557a14b3f2c3e90a6d00b59ac03ca2f6609877228dbb7c85b603d44e",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-host/src/calls.rs#L833"
+    },
+    {
+      "id": "Z25",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-host/src/voice_calls.rs",
+      "line": 608,
+      "anchor": "pub async fn finish",
+      "sha256": "632f7450dd5b4bd4643d45e3bd250c6a09b4240178bd99e21cda6086d10767ba",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-host/src/voice_calls.rs#L608"
+    },
+    {
+      "id": "Z26",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-host/src/knowledge.rs",
+      "line": 1,
+      "anchor": "Shared knowledge",
+      "sha256": "017404557cee8a2739e4ba7ae6bc6e19cf0ce7a0a67990102d5ccac131e36a26",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-host/src/knowledge.rs#L1"
+    },
+    {
+      "id": "Z27",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-host/src/memory_ops.rs",
+      "line": 558,
+      "anchor": "pub fn commit_turn",
+      "sha256": "b114f6a58b92e99e86f249a6b5c25299a8dab3f0a0c120cd2163c4205693b289",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-host/src/memory_ops.rs#L558"
+    },
+    {
+      "id": "Z28",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-host/src/tools/executor.rs",
+      "line": 1207,
+      "anchor": "async fn allowed_without_asking",
+      "sha256": "b11608687faf94ae47e114ed47850511e89eee1786cc0e2d012c5a0f20a7592f",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-host/src/tools/executor.rs#L1207"
+    },
+    {
+      "id": "Z29",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "docs/specs/outbound-guard.md",
+      "line": 15,
+      "anchor": "## Today (code)",
+      "sha256": "4b9bdf2d1a689d1e3dca4ec43eee324cdf7378940ea1a6073f2ae862f92fdbb9",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/docs/specs/outbound-guard.md#L15"
+    },
+    {
+      "id": "Z30",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-host/src/tools/command_policy.rs",
+      "line": 20,
+      "anchor": "const READ_ONLY:",
+      "sha256": "ecf7f0df7658d1cc5c481289a0f39ddf5269e60a5b58bab1be2d5b838c351a4d",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-host/src/tools/command_policy.rs#L20"
+    },
+    {
+      "id": "Z31",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "rust/crates/zyndi-host/src/codync_import/history.rs",
+      "line": 125,
+      "anchor": "pub fn map(",
+      "sha256": "d92d55e75e892d72f369fb63f43873adf437194b0e9563ade17290a6323e144f",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/rust/crates/zyndi-host/src/codync_import/history.rs#L125"
+    },
+    {
+      "id": "Z32",
+      "repository": "kynjal26/zyndi",
+      "commit": "b922a89dce1f9b20b4adecc9cccf99aef99fa5d0",
+      "path": "packages/protocol/src/domain.ts",
+      "line": 2060,
+      "anchor": "export const PageSummary",
+      "sha256": "b915a18097ae9347b27125558a44ab43f2bf691d6b716b7cc114be5ded918fbf",
+      "url": "https://github.com/kynjal26/zyndi/blob/b922a89dce1f9b20b4adecc9cccf99aef99fa5d0/packages/protocol/src/domain.ts#L2060"
+    }
+  ]
+}
