@@ -42,9 +42,11 @@ UX should replace Codync's. Retain Codync's mobile apps.
   order, visibly announce changes, and return to the preferred account when available. Extend
   Codync's existing fallback mechanism rather than replacing it wholesale.
 - Voice: the voice speaks as the Bot, while actual work and reported results come from its agent.
-  Bots may call the user or a colleague only when requested or through an explicitly configured
-  routine; no independent decision to call. Call transcripts and reports are available to the
-  requester, callee and workspace admins.
+  A Bot may call only inside a turn. The turn may be started by a person, a routine, another Bot,
+  a task, a helper, or the Bot's own work. Inside the turn, the Bot decides whether to call. There
+  is no separate background caller and no automatic urgency rule. Call transcripts and reports are
+  available to the requester, callee and workspace admins. See
+  [calling behavior](../plans/codync-calling-behavior.md).
 - Computer use: a central-host Bot can operate the requesting member's own computer through that
   member's desktop app. Mac and Windows are required at initial release. Admins set maximum
   access and members grant access to local apps/folders. Sharing a Bot alone grants no device

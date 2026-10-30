@@ -26,7 +26,7 @@ specification and regression verification. No capability is removed by omission 
 | `team-knowledge` | Workspace/person/restricted memory ownership using Codync's files, evidence checks, dreaming and forgetting | `team-access` |
 | `action-policy` | Deterministic action classes, designated approvers and explicit exceptions above ordinary Ask/Auto | `team-access`, `provider-accounts` |
 | `desktop-device-bridge` | Person-bound central-host → desktop execution, admin ceiling plus local consent, Codync driver integration; Mac and Windows | `team-access`, `action-policy` |
-| `team-voice` | First-person Bot voice, requested/routine-triggered outbound calls, native client ringing and private reports | `team-access`, `provider-accounts`, `action-policy` |
+| `team-voice` | First-person Bot voice, turn-authorized outbound calls, native client ringing and private reports | `team-access`, `provider-accounts`, `action-policy` |
 | `creation-workspace` | Extend Codync artifacts with rich documents/canvases, revisions, restore, designated editors and anchored feedback | `team-access`, `action-policy` |
 | `desktop-ui` | Apply Zyndi's visual language to Codync's existing desktop components, preserving UX and state semantics | — |
 | `data-migration` | Audienced history/content/account mapping, preserved archive, dry-run reconciliation, routine ownership and rollback rehearsal | `team-access`, `provider-accounts`, `team-knowledge`, `action-policy`, `desktop-device-bridge`, `team-voice`, `creation-workspace` |
@@ -110,13 +110,26 @@ target handling, consent/revocation and background interaction without unexpecte
 
 ### `team-voice`
 
-Keep Codync host-owned calls and audio engines. Adapt Bot identity, explicit call authorization,
-callee invitations and person/private-report ownership. Retain Codync's spoken approval flow,
-subject to the team approver's authority; no Zyndi exact-request voice-ID safeguard is selected.
+Keep Codync host-owned calls and audio engines. Adapt Bot identity, turn-authorized call
+authorization, callee invitations and person/private-report ownership. A call may start only
+inside a turn; the turn may be started by a person, a routine, another Bot, a task, a helper, or
+the Bot's own work. The requester is the person the turn is for; the host checks target sharing,
+provider account, device availability, one call per person, spacing and hidden-Bot refusal.
+Retain Codync's spoken approval flow, subject to the team approver's authority; no Zyndi
+exact-request voice-ID safeguard is selected. See
+[calling behavior](codync-calling-behavior.md).
 
-Must prove: requested/routine-only call initiation, one answering device, private reports and
-history, native-client ringing/cancel/decline and no disclosure through later shared turns.
-Experimental native Codex voice is not a prerequisite for first-person Bot identity.
+Codync today has live/user-started voice but no outbound Bot call tool, invitations,
+ring/answer/decline/cancel, scheduling, per-person limits, private report audience or native
+incoming ringing. The selected behavior is a build, not a port. It requires the dependency chain
+in this map and new turn sources for task, helper, self-turn and call report.
+
+Must prove: turn-authorized call initiation (person, routine, Bot/task/helper/self-turn), one
+answering device, one active call per person, spacing, private reports and history, native-client
+ringing/cancel/decline, and no transcript disclosure through the shared chat or later shared
+turns. Codync currently has none of the outbound lifecycle; the first slice cannot be a native
+ringing claim. Experimental native Codex voice is not a prerequisite for first-person Bot
+identity.
 
 ### `creation-workspace`
 

@@ -312,6 +312,11 @@ reconnect catch-up, speech cues and full-size call conversation views already ex
 voice describes itself as a relay for the Bot. This does not need a whole Zyndi voice transplant.
 [C17] [C18]
 
+What does not exist: outbound Bot calling, invitations, ring/answer/decline/cancel, scheduling,
+per-person limits, private report audience and native incoming ringing. Current calls are
+user-started live voice; the end path copies the transcript into the shared chat, which conflicts
+with the private-report rule.
+
 ### Selected Zyndi contributions
 
 The first-person voice uses the Bot's name/personality while real work goes through the agent,
@@ -321,15 +326,29 @@ call reporting. Call content has an audience and private agent lanes; live cue o
 is not equivalent privacy. [Z23] [Z24] [Z25] [Z02] [Z03]
 
 Use Codync's call storage/announcement/reconnect path as the foundation, extend it with person,
-requester, authorized trigger, callee and report audience, and adapt first-person instructions.
-Add ringing to existing native mobile clients: do not embed Zyndi's Expo app to obtain it.
+requester, turn-authorized trigger, callee and report audience, and adapt first-person
+instructions. Add ringing to existing native mobile clients: do not embed Zyndi's Expo app to
+obtain it.
+
+Calling is turn-authorized: a call may start only inside a turn, including a turn started by the
+Bot's own work, but not by a separate background caller. The requester is the person the turn is
+for; the Bot is the actor. The recommended rule is that a call-report turn must not initiate
+another call. The host checks
+target sharing, provider account, device availability, one call per person, spacing and hidden-Bot
+refusal. This supersedes the earlier "requested/routine-only" wording; see
+[calling behavior](../plans/codync-calling-behavior.md).
+
+The 2026-10-30 audit confirms this is a build: Codync has no outbound call tool or incoming-call
+path. Do not present the push/ring/answer path as implemented.
 
 ### Important separations
 
 | Item | Source finding | Disposition |
 | --- | --- | --- |
 | Voice speaks as Bot | First-person prompt; agent remains executor | Selected |
-| Bot calls a colleague | Zyndi invitation/push/answer path | Selected; preserve explicit requester/routine authorization |
+| Bot calls a colleague | Zyndi invitation/push/answer path | Selected; preserve turn-authorized calling (person, routine, Bot/task/helper/self-turn) |
+| Native incoming ringing | Codync has no PushKit/CallKit incoming path; archived CallKit was outgoing-only; APNs alert/liveactivity and FCM alert/task only | New implementation, not a verification gap |
+| Call transcript privacy | Current end path copies the full transcript into a Notice in the Bot/group chat | Must move to an audienced report; leave a redacted call line |
 | Private transcript/report | Zyndi audience filtering and private session lane | Selected; requires team-access foundation |
 | Exact-request spoken approval ID | Zyndi requires `approvalId`; Codync looks up pending approval | Explicitly excluded; preserve Codync voice-answer behavior, within team approver permissions |
 | Native Codex-thread realtime | Zyndi uses experimental `thread/realtime/*`; rejects calls with a non-null person ID | Not implied by first-person voice; no need to replace Codync's agent transport just for it |
